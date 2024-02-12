@@ -90,7 +90,7 @@ class _RepoMainPageState extends State<RepoMainPage> {
                           repositoryProvider.filteredRepositories[index];
                       return ListTile(
                         title: Text(
-                          repository.owner.login,
+                          repository.ownerUsername,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
