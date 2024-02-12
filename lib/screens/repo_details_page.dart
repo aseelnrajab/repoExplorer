@@ -17,7 +17,7 @@ class RepositoryDetailPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(repository.ownerUsername.toUpperCase()),
+        title: Text(repository.repoName.toUpperCase()),
       ),
       body: SingleChildScrollView(
         child: Column(

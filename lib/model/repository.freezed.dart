@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Repository {
-  String get ownerUsername => throw _privateConstructorUsedError;
+  String get repoName => throw _privateConstructorUsedError;
   String get fullName => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   Owner get owner => throw _privateConstructorUsedError;
@@ -33,7 +33,7 @@ abstract class $RepositoryCopyWith<$Res> {
       _$RepositoryCopyWithImpl<$Res, Repository>;
   @useResult
   $Res call(
-      {String ownerUsername, String fullName, String description, Owner owner});
+      {String repoName, String fullName, String description, Owner owner});
 
   $OwnerCopyWith<$Res> get owner;
 }
@@ -51,15 +51,15 @@ class _$RepositoryCopyWithImpl<$Res, $Val extends Repository>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ownerUsername = null,
+    Object? repoName = null,
     Object? fullName = null,
     Object? description = null,
     Object? owner = null,
   }) {
     return _then(_value.copyWith(
-      ownerUsername: null == ownerUsername
-          ? _value.ownerUsername
-          : ownerUsername // ignore: cast_nullable_to_non_nullable
+      repoName: null == repoName
+          ? _value.repoName
+          : repoName // ignore: cast_nullable_to_non_nullable
               as String,
       fullName: null == fullName
           ? _value.fullName
@@ -94,7 +94,7 @@ abstract class _$$RepositoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String ownerUsername, String fullName, String description, Owner owner});
+      {String repoName, String fullName, String description, Owner owner});
 
   @override
   $OwnerCopyWith<$Res> get owner;
@@ -111,15 +111,15 @@ class __$$RepositoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ownerUsername = null,
+    Object? repoName = null,
     Object? fullName = null,
     Object? description = null,
     Object? owner = null,
   }) {
     return _then(_$RepositoryImpl(
-      ownerUsername: null == ownerUsername
-          ? _value.ownerUsername
-          : ownerUsername // ignore: cast_nullable_to_non_nullable
+      repoName: null == repoName
+          ? _value.repoName
+          : repoName // ignore: cast_nullable_to_non_nullable
               as String,
       fullName: null == fullName
           ? _value.fullName
@@ -141,13 +141,13 @@ class __$$RepositoryImplCopyWithImpl<$Res>
 
 class _$RepositoryImpl implements _Repository {
   const _$RepositoryImpl(
-      {required this.ownerUsername,
+      {required this.repoName,
       required this.fullName,
       required this.description,
       required this.owner});
 
   @override
-  final String ownerUsername;
+  final String repoName;
   @override
   final String fullName;
   @override
@@ -157,7 +157,7 @@ class _$RepositoryImpl implements _Repository {
 
   @override
   String toString() {
-    return 'Repository(ownerUsername: $ownerUsername, fullName: $fullName, description: $description, owner: $owner)';
+    return 'Repository(repoName: $repoName, fullName: $fullName, description: $description, owner: $owner)';
   }
 
   @override
@@ -165,8 +165,8 @@ class _$RepositoryImpl implements _Repository {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RepositoryImpl &&
-            (identical(other.ownerUsername, ownerUsername) ||
-                other.ownerUsername == ownerUsername) &&
+            (identical(other.repoName, repoName) ||
+                other.repoName == repoName) &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
             (identical(other.description, description) ||
@@ -176,7 +176,7 @@ class _$RepositoryImpl implements _Repository {
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, ownerUsername, fullName, description, owner);
+      Object.hash(runtimeType, repoName, fullName, description, owner);
 
   @JsonKey(ignore: true)
   @override
@@ -187,13 +187,13 @@ class _$RepositoryImpl implements _Repository {
 
 abstract class _Repository implements Repository {
   const factory _Repository(
-      {required final String ownerUsername,
+      {required final String repoName,
       required final String fullName,
       required final String description,
       required final Owner owner}) = _$RepositoryImpl;
 
   @override
-  String get ownerUsername;
+  String get repoName;
   @override
   String get fullName;
   @override

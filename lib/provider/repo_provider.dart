@@ -50,9 +50,8 @@ class RepositoryProvider extends ChangeNotifier {
     _filteredRepositories = repositories;
     switch (sortBy) {
       case 'name':
-        _repositories.sort((a, b) => a.ownerUsername
-            .toLowerCase()
-            .compareTo(b.ownerUsername.toLowerCase()));
+        _repositories.sort((a, b) =>
+            a.repoName.toLowerCase().compareTo(b.repoName.toLowerCase()));
         break;
       case 'description':
         _repositories.sort((a, b) => a.description.compareTo(b.description));
@@ -79,9 +78,8 @@ class RepositoryProvider extends ChangeNotifier {
     _filteredRepositories = repositories;
     if (val.isNotEmpty) {
       _filteredRepositories = _repositories
-          .where((repository) => repository.ownerUsername
-              .toLowerCase()
-              .contains(val.toLowerCase()))
+          .where((repository) =>
+              repository.repoName.toLowerCase().contains(val.toLowerCase()))
           .toList();
       notifyListeners();
     } else {
