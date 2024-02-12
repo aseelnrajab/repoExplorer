@@ -36,7 +36,7 @@ class _RepoMainPageState extends State<RepoMainPage> {
             icon: const Icon(Icons.refresh),
             onPressed: () {
               repositoryProvider.fetchRepositories();
-              repositoryProvider.filterRepositories(''); //clear the filtered
+              repositoryProvider.searchRepos(''); //clear the filtered
             },
           ),
           IconButton(
@@ -76,7 +76,7 @@ class _RepoMainPageState extends State<RepoMainPage> {
                           icon: const Icon(Icons.sort))
                     ]),
                     onSearch: (val) {
-                      repositoryProvider.filterRepositories(val);
+                      repositoryProvider.searchRepos(val);
                     },
                   ),
                 ),

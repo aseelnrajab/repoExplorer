@@ -74,7 +74,7 @@ class RepositoryProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void filterRepositories(String val) {
+  void searchRepos(String val) {
     _filteredRepositories = repositories;
     if (val.isNotEmpty) {
       _filteredRepositories = _repositories
