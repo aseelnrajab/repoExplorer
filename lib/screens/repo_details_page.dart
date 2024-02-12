@@ -73,6 +73,7 @@ class RepositoryDetailPage extends StatelessWidget {
                   return Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: ListView.separated(
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: repositoryProvider.allBranches.length,
                       itemBuilder: (context, index) {
